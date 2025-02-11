@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import Dashboard from "./components/Dashboard"
 import CashManagement from "./components/CashManagement"
 import InventoryManagement from "./components/InventoryManagement"
-import PaymentGateway from "./components/PaymentGateway"
 import BillingSystem from "./components/BillingSystem"
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
     { id: "dashboard", label: "Dashboard" },
     { id: "cash", label: "Cash Management" },
     { id: "inventory", label: "Inventory" },
-    { id: "payment", label: "Payment Gateway" },
     { id: "billingsystem", label: "Billing System" },
   ]
 
@@ -53,8 +51,7 @@ export default function Home() {
           {activeTab === "dashboard" && <Dashboard />}
           {activeTab === "cash" && <div className='bg-gray-900 p-6 rounded-xl'><CashManagement /></div>}
           {activeTab === "inventory" && <InventoryManagement />}
-          {activeTab === "payment" && <PaymentGateway />}
-          {activeTab === "billingsystem" && <BillingSystem />}
+         {activeTab === "billingsystem" && <BillingSystem />}
         </motion.div>
       </main>
     </div>
